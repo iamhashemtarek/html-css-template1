@@ -1,0 +1,311 @@
+/* common styles*/
+    /*
+        - opacity hover (buttons)
+        - headers style
+        - sections margins
+        - div-s hover style
+    */
+
+ /* general */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body {
+    font-family: 'Varela Round', sans-serif;
+    height: 3000px;
+ }
+ .container {
+     width: 80%;
+     margin: auto;
+ }
+ h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', sans-serif;
+ }
+ p {
+    font-family: 'Varela Round', sans-serif;
+ }
+ button:hover {
+     opacity: 0.7;
+ }
+ .title-prop {
+     margin-top: 120px;
+     text-align: center;
+     font-size: 40px;
+     text-transform: capitalize;
+ }
+ .title-prop::after {
+     content: "";
+     display: block;
+     height: 4px;
+     width: 40px;
+     margin: auto;
+     margin-top: 10px;
+     margin-bottom: 74px;
+     border: 3px hidden;
+     background-color: #6195FF;
+ }
+.clear {
+    clear: both;
+}
+ .pd-btm {
+     height: 134px;
+ }
+ 
+ .ltr-effect {
+     position: relative;
+ }
+ .ltr-effect::after {
+     content: "";
+     position: absolute;
+     width: 0%;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background-color: #333;
+     z-index: -1;
+     transition: width 0.5s;
+ }
+ .ltr-effect:hover::after {
+     width: 100%;
+ }
+ .ltr-effect:hover .item-title {
+     color: #fff;
+ }
+ .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28,29,33,0.7)  ;
+}
+
+/* navigation bar */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.header .logo {
+    float: left;
+    padding-top: 7px;
+}
+.header .logo a {
+    display: block;
+    width: 100px;
+}
+.header .logo a img {
+    width: 100%;
+}
+.header .nav-element {
+    float: right;
+}
+.header .nav-element li {
+    display: inline-block;
+}
+.header .nav-element li a {
+    display: block;
+    padding: 25px 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: "Varela Round";
+    font-size: 15px;
+}
+.header .nav-content {
+    overflow: hidden;
+}
+.header .drpdwn {
+    position: relative;
+ 
+}
+.header .drpdwn-menu {
+    position: absolute;
+}
+
+
+/* Home */
+.home {
+    height: 100Vh;
+    background-image: url("../images/background/background1.webp");
+    background-size: cover;
+}
+.home .home-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 60%;
+}
+.home .title{
+    text-transform: uppercase;
+    font-size: 55px;
+}
+.home button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 5px;
+    border-style: none;
+    border-radius: 3px;
+    color: #000;
+    font-size: 17px;
+    text-transform: capitalize;
+    
+}
+.home .home-content h1 {
+    text-align: center;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+.home .home-content button {
+    text-align: center;
+    color:#000;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+.home .home-content p{
+    text-align: center;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+.home .home-content .btn-more {
+    background-color: #6195FF;
+    color: #fff;
+}
+
+
+/* content */
+
+.content .item  {
+    width: 30%;
+    padding: 44px 20px;
+    text-align: center;
+    border: thin solid gainsboro;
+    line-height: 1.5;
+    float: left;
+}
+.content .content-item .cntr {
+    margin: 0 30px ;
+}
+.content .item .icon {
+    color: #337ab7;
+}
+.content .item .item-title {
+    margin: 7px 0;
+}
+
+.content .item .item-desc {
+    color: #868F9B;
+}
+.content .item .rdmore {
+    display: block;
+    margin-top: 7px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #337ab7;
+}
+
+/*portfolio*/
+.portfolio {
+    background-color: #FAFAFA;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+}
+.portfolio .portfolio-items {
+    overflow: hidden;
+}
+.portfolio .portfolio-item {
+    position: relative;
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+.portfolio .portfolio-item .portfolio-item-img {
+    width: 100%;
+}
+.portfolio .portfolio-items .cntr {
+    margin: 0 3.2%;
+}
+.portfolio .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(28,29,33, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.portfolio .portfolio-item:hover .layer-content {
+    opacity: 1;
+    visibility: visible;
+}
+.portfolio .layer-items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+.portfolio .layer-info {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #6195FF;
+}
+.portfolio .layer-title {
+    font-size: 21px;
+    text-transform: capitalize;
+    color: #fff;
+    margin: 8px;
+}
+.portfolio .icon {
+    background-color: #6195FF;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* Services */
+.services .services-items {
+    overflow: hidden;
+}
+.services .service-item {
+    float: left;
+    width: 30%;
+    height: 220px;
+    padding: 44px 20px;
+    text-align: center;
+    border: thin solid gainsboro;
+    line-height: 1.5;
+    
+
+}
+.services .middle {
+    margin: 0 30px ;
+}
+.services .top {
+    margin-bottom: 30px;
+}
+.services .service-item .icon {
+    color: #337ab7;
+}
+.services .service-item .service-title {
+    margin: 7px 0;
+    margin-left: 5px;
+    display: inline-block;
+    text-transform: capitalize;
+    
+}
+.ltr-effect:hover .service-title {
+    color: #fff;
+}
+.services .service-item .service-desc {
+    color: #868F9B;
+}
+
